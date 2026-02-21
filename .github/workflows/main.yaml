@@ -22,6 +22,5 @@ jobs:
         if: failure()
         with:
           github-token: ${{ secrets.ACTIONS_TOKEN }}
-          mcp-url: ${{ secrets.MCP_URL }}
           copilot-token: ${{ secrets.COPILOT_TOKEN }}
           auto-remediate: "false"
