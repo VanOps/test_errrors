@@ -17,3 +17,11 @@ jobs:
           scandir: "."
       - name: Run script.sh
         run: bash script.sh
+
+      - uses: VanOps/IA-actions/workflow-failure-analyzer@main
+        if: failure()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          mcp-url: ${{ secrets.MCP_URL }}
+          copilot-token: ${{ secrets.COPILOT_TOKEN }}
+          auto-remediate: "false"
