@@ -21,6 +21,6 @@ jobs:
       - uses: VanOps/IA-actions/workflow-failure-analyzer@main
         if: failure()
         with:
-          github-token: ${{ secrets.ACTIONS_TOKEN }}
-          copilot-token: ${{ secrets.COPILOT_TOKEN }}
-          auto-remediate: "false"
+          github-token: ${{ secrets.GITHUB_TOKEN }} # Usa GITHUB_TOKEN, no PAT
+          mcp-url: ${{ secrets.MCP_URL }} # Opcional
+          auto-remediate: "true" # Opcional
