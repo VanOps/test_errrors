@@ -18,7 +18,7 @@ jobs:
       - name: Run script.sh
         run: bash script.sh
 
-      - uses: VanOps/IA-actions/workflow-failure-analyzer@main
+      - uses: VanOps/actions/workflow-failure-analyzer@main
         if: failure()
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }} # Usa GITHUB_TOKEN, no PAT
